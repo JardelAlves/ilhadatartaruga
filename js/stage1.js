@@ -42,7 +42,7 @@ function musica(){
 		if(barraGRU + barraGTAR + barraAGRO > 1500 && music2playing == false){	
 		music.stop();
 		music.loop = true;
-		music.volume = 0.1;
+		music.volume = 1;
 		music.stop();
 		music.play();
 		music2playing = true;

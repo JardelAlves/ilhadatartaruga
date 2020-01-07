@@ -90,7 +90,7 @@ var loadState = {
 		game.load.image('perfil','img/Perfil.png');
 		game.load.spritesheet('menuIlha','img/menu_ilha.png',61,14);
 		game.load.spritesheet('menuPerfil','img/menu_perfil.png',83,14);
-		game.load.spritesheet('menuTutorial','img/menu_Tutorial.png',115.3,14);
+		game.load.spritesheet('menuTutorial','img/menu_tutorial.png',115.3,14);
 		game.load.spritesheet('Tutorial','img/Tutorial.png');
 		game.load.spritesheet('menuConfiguracao','img/botao_configuracao.png',33,31);
 		game.load.spritesheet('menuSobre','img/botao_Sobre.png',33,31);
@@ -105,14 +105,14 @@ var loadState = {
 		game.load.spritesheet('ok','img/OK.png',131.5,52);
 		
 		// Carrega Audio
-		game.load.audio('music', 'sfx/Musica1.mp3');
-		game.load.audio('music2', 'sfx/Musica2.mp3');
-		game.load.audio('ClickMenu', 'sfx/ClickMenu.mp3');
-		game.load.audio('ClickMenu2', 'sfx/ClickMenuOp2.mp3');
-		game.load.audio('ClickOn', 'sfx/ClickOn.mp3');
-		game.load.audio('ClickOut', 'sfx/ClickOut.mp3');
-		game.load.audio('LixoAudio', 'sfx/Lixo.mp3');
-		game.load.audio('redeEtartaruga', 'sfx/interaçãoComRedeEcomTartaruga.mp3');
+		game.load.audio('music','sfx/Musica1.mp3');
+		game.load.audio('music2','sfx/Musica2.mp3');
+		game.load.audio('ClickMenu','sfx/ClickMenu.mp3');
+		game.load.audio('ClickMenu2','sfx/ClickMenuOp2.mp3');
+		game.load.audio('ClickOn','sfx/ClickOn.mp3');
+		game.load.audio('ClickOut','sfx/ClickOut.mp3');
+		game.load.audio('LixoAudio','sfx/Lixo.mp3');
+		game.load.audio('redeEtartaruga','sfx/interaçãoComRedeEcomTartaruga.mp3');
 	},
 	
 	create: function(){
