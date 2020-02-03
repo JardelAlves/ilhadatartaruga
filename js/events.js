@@ -1,35 +1,36 @@
-	//variáveis barras
-	var barraGRU = 1000;
-	var barraGTAR = 1000;
-	var barraAGRO = 1000;	
-	var taxaGRU = 10;
-	var taxaGTAR = 10;
-	var taxaAGRO = 10;	
-	//variaveis para dias seguidos
-	var reciclardayStreak = false;
-	var reduzirdayStreak = false;
-	var reutilizardayStreak = false;
-	
-	var reduzirplasticoStreak = false;
-	var reduzirplastico = 0;
-	var reutilizarvidroStreak = false;
-	var reutilizarvidro = 0;
+// Variáveis barras
+var barraGRU = 1000;
+var barraGTAR = 1000;
+var barraAGRO = 1000;	
+var taxaGRU = 10;
+var taxaGTAR = 10;
+var taxaAGRO = 10;	
+
+// Variáveis para dias seguidos
+var reciclardayStreak = false;
+var reduzirdayStreak = false;
+var reutilizardayStreak = false;
+
+var reduzirplasticoStreak = false;
+var reduzirplastico = 0;
+var reutilizarvidroStreak = false;
+var reutilizarvidro = 0;
 	
 $(document).ready(function(){
-	//escreve os valores das barras
+	// Escreve os valores das barras
 	$('#GRU').html('GRU:' + barraGRU +'<p></p>'+ 'Taxa GRU: ' + taxaGRU+'/5s'+'<p></p>'+'Dias Seguidos: Reduziu: '+reduzirStreak+' reciclou: '+ reciclarStreak+' reutilizou: '+reutilizarStreak+'<p></p>');				
 	$('#GTAR').html('GTAR:' + barraGTAR +'<p></p>'+ 'Taxa GTAR: ' + taxaGTAR+'/5s'+'<p></p>'+'Tartarugas e Redes surgem a cada: 10 segundos'+'<p></p>');
 	$('#AGRO').html('AGRO:' + barraAGRO +'<p></p>'+ 'Taxa AGRO: ' + taxaAGRO+'/5s');
 	
-	//temporiza a taxa das barras	
+	// Temporiza a taxa das barras	
 	setInterval(barraGRUfun, 5000);
 	setInterval(barraGTARfun, 5000);
 	setInterval(barraAGROfun, 5000);
 	
-	//contas dias seguidos
+	// Contas dias seguidos
 	setInterval(dayStreakfun, 5000);
 	
-	//funcoes das barras	
+	// Funções das barras	
 	function barraGRUfun(){
 		barraGRU += taxaGRU;
 		if(barraGRU > 1000){barraGRU = 1000;}
@@ -44,8 +45,8 @@ $(document).ready(function(){
 	
 	function barraGTARfun(){
 		barraGTAR += taxaGTAR;
-		if(barraGTAR > 1000){barraGTAR = 1000;}
-		if(barraGTAR < 0){barraGTAR = 0;}		
+		if(barraGTAR > 1000) {barraGTAR = 1000;}
+		if(barraGTAR < 0) {barraGTAR = 0;}		
 		$('#GTAR').html('GTAR:' + barraGTAR +'<p></p>'+ 'Taxa GTAR: ' + taxaGTAR+'/5s'+'<p></p>'+'Tartarugas e Redes surgem a cada: 10 segundos'+'<p></p>');
 		barra1.clear();
 		barra2.clear();
@@ -66,16 +67,15 @@ $(document).ready(function(){
 		circuloBarras();	
 	}
 	
-	//tartarugas doentes aparecem na praia a cada 10s
+	//tartarugas doentes aparecem na praia a cada 15s
 	setInterval(criaTartarugas, 15000);
-	//ovos aparecem na praia a cada 10s
+	//ovos aparecem na praia a cada 15s
 	setInterval(criaovosTartarugas, 15000)	
-	//redes aparecem na praia a cada 10s
+	//redes aparecem na praia a cada 15s
 	setInterval(criaRedes, 15000);
-	//residuos aparecem na praia a cada 10s
+	//residuos aparecem na praia a cada 15s
 	setInterval(criaResiduos, 15000);
 	
-		 var day = 0;//debug - deletar depois
 	//Dias seguidos funcao
 	function dayStreakfun(){
 		if(reciclardayStreak == false){
@@ -89,17 +89,11 @@ $(document).ready(function(){
 			if(reutilizarvidroStreak == false){reutilizarvidro = 0;}
 		}
 
-	 reciclardayStreak = false;
-	 reduzirdayStreak = false;
-	 reutilizardayStreak = false;
-	 
-	 reduzirplasticoStreak = false;
-	 reutilizarvidroStreak = false;
-	 
-//debug - deletar depois	 
-day++;
- console.log(day)	 
-	}
+	reciclardayStreak = false;
+	reduzirdayStreak = false;
+	reutilizardayStreak = false;
 	
+	reduzirplasticoStreak = false;
+	reutilizarvidroStreak = false; 
+	}	
 });	
-

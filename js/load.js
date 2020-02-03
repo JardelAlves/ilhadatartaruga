@@ -2,7 +2,7 @@ var loadState = {
 	
 	preload: function() {
 		// Cria variável e adiciona um texto (posição X, posição Y, 'texto', {objeto com fonte, cor, tamanho, etc})
-		var txtLoading = game.add.text(game.world.centerX, game.world.centerY - 20, 'LOADING...', {font:'16px MontserratMedium', fill:'#FFF'});
+		var txtLoading = game.add.text(game.world.centerX, game.world.centerY - 20, 'CARREGANDO...', {font:'16px MontserratMedium', fill:'#FFF'});
 			txtLoading.anchor.set(0.5);
 			
 		// Cria variável e adiciona uma imagem (posição X, posição Y, 'nome da instância da imagem')
